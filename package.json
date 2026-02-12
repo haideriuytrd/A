@@ -1,0 +1,77 @@
+{
+  "name": "project-root",
+  "version": "1.0.0",
+  "private": true,
+  "main": "electron-main.js",
+  "description": "Stratos desktop app",
+  "author": "",
+  "productName": "Stratos",
+  "scripts": {
+    "start": "powershell -NoProfile -ExecutionPolicy Bypass -File .\\start-all.ps1",
+    "start:cmd": "start-all.bat",
+    "build": "npm --prefix backend/frontend run build",
+    "build-desktop": "powershell -NoProfile -ExecutionPolicy Bypass -Command .\\build-desktop.ps1",
+    "desktop": "electron .",
+    "desktop:dev": "electron .",
+    "build-backend": "powershell -NoProfile -ExecutionPolicy Bypass -File .\\build-backend.ps1",
+    "dist": "powershell -NoProfile -ExecutionPolicy Bypass -File .\\build-desktop.ps1"
+  },
+  "dependencies": {
+    "wait-on": "^7.0.0"
+  },
+  "devDependencies": {
+    "electron": "^39.2.7",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.stratos.app",
+    "productName": "Stratos",
+    "directories": {
+      "buildResources": "assets",
+      "output": "dist"
+    },
+    "files": [
+      "electron-main.js",
+      "backend/",
+      "node_modules/",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "backend/frontend/build",
+        "to": "backend/frontend/build"
+      },
+      {
+        "from": "dist/stratos-backend.exe",
+        "to": "stratos-backend.exe"
+      }
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "stratos.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Stratos",
+      "installerIcon": "stratos.ico",
+      "uninstallerIcon": "stratos.ico",
+      "installerHeaderIcon": "stratos.ico"
+    }
+  }
+}

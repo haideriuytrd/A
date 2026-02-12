@@ -1,0 +1,169 @@
+{
+  "brand_identity": {
+    "name": "Stratos",
+    "tagline": "Elevate Your Language Skills",
+    "archetype": "The Playful Explorer",
+    "emotional_tone": "Uplifting, Encouraging, Fun, Rewarding",
+    "visual_metaphor": "Sky, Clouds, Balloons, Ascent, Space (for higher levels)"
+  },
+  "typography": {
+    "headings": {
+      "font_family": "Nunito, sans-serif",
+      "weights": ["700", "800", "900"],
+      "usage": "Main headers, section titles, gamification stats",
+      "letter_spacing": "tracking-tight"
+    },
+    "body": {
+      "font_family": "Outfit, sans-serif",
+      "weights": ["400", "500", "600"],
+      "usage": "Lesson text, descriptions, UI elements",
+      "line_height": "leading-relaxed"
+    },
+    "installation": "Import from Google Fonts: @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=Outfit:wght@400;500;600;700&display=swap');"
+  },
+  "colors": {
+    "palette": {
+      "primary": {
+        "default": "#0EA5E9",
+        "hover": "#0284C7",
+        "active": "#0369A1",
+        "foreground": "#FFFFFF",
+        "description": "Stratos Sky Blue - Used for primary actions, active states, and branding."
+      },
+      "secondary": {
+        "default": "#6366F1",
+        "hover": "#4F46E5",
+        "foreground": "#FFFFFF",
+        "description": "Indigo - Used for secondary actions and deep sky accents."
+      },
+      "accent": {
+        "default": "#FACC15",
+        "hover": "#EAB308",
+        "foreground": "#422006",
+        "description": "Solar Yellow - Used for streaks, XP, crowns, and high-value rewards."
+      },
+      "success": {
+        "default": "#22C55E",
+        "foreground": "#FFFFFF",
+        "description": "Correct Answer Green"
+      },
+      "error": {
+        "default": "#EF4444",
+        "foreground": "#FFFFFF",
+        "description": "Wrong Answer Red"
+      },
+      "background": {
+        "default": "#F8FAFC",
+        "paper": "#FFFFFF",
+        "dark": "#0F172A"
+      },
+      "text": {
+        "primary": "#0F172A",
+        "secondary": "#64748B",
+        "muted": "#94A3B8"
+      }
+    },
+    "gradients": {
+      "hero": "bg-gradient-to-b from-sky-400 to-indigo-500",
+      "card": "bg-gradient-to-br from-white to-slate-50",
+      "button_shine": "bg-gradient-to-t from-white/10 to-transparent"
+    }
+  },
+  "ui_components": {
+    "buttons": {
+      "primary": "bg-sky-500 hover:bg-sky-400 text-white font-extrabold rounded-2xl border-b-4 border-sky-700 active:border-b-0 active:translate-y-1 transition-all",
+      "secondary": "bg-white hover:bg-slate-50 text-slate-700 font-bold rounded-2xl border-2 border-slate-200 border-b-4 active:border-b-2 active:translate-y-[2px] transition-all",
+      "danger": "bg-red-500 hover:bg-red-400 text-white font-bold rounded-2xl border-b-4 border-red-700 active:border-b-0 active:translate-y-1 transition-all"
+    },
+    "cards": {
+      "default": "bg-white rounded-3xl border-2 border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] p-6",
+      "interactive": "bg-white rounded-3xl border-2 border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all cursor-pointer",
+      "lesson_option": "bg-white hover:bg-sky-50 border-2 border-slate-200 hover:border-sky-300 rounded-2xl p-4 cursor-pointer transition-all"
+    },
+    "inputs": {
+      "default": "bg-slate-50 border-2 border-slate-200 focus:border-sky-400 focus:ring-4 focus:ring-sky-100 rounded-xl px-4 py-3 font-medium text-slate-700 placeholder:text-slate-400 transition-all outline-none"
+    }
+  },
+  "layout_strategies": {
+    "dashboard": {
+      "type": "The Cloud Ascent",
+      "description": "A vertical scrolling path where lessons are circular nodes floating among clouds. Background changes color as user scrolls up (Dawn -> Day -> Dusk -> Space).",
+      "grid": "grid-cols-1 md:grid-cols-12 gap-6"
+    },
+    "marketing": {
+      "type": "Bento Grid + Hero",
+      "description": "Large hero section with floating 3D elements. Feature sections use bento-grid layout with rounded corners and colorful backgrounds."
+    }
+  },
+  "visual_assets": {
+    "images": [
+      {
+        "category": "Hero",
+        "url": "https://images.unsplash.com/photo-1668106576752-f049d50680bb",
+        "description": "Colorful hot air balloon in sky - Represents the 'Stratos' ascent theme.",
+        "usage": "Landing page hero background or main visual."
+      },
+      {
+        "category": "Learning Vibe",
+        "url": "https://images.unsplash.com/photo-1713811978849-414ce73e4d3c",
+        "description": "Happy woman using phone",
+        "usage": "Testimonials or 'Learn Anywhere' section."
+      },
+      {
+        "category": "Community",
+        "url": "https://images.unsplash.com/photo-1634096996263-164e157c9099",
+        "description": "Diverse crowd",
+        "usage": "Leaderboard promo or Community section."
+      }
+    ],
+    "icons": {
+      "library": "Lucide React",
+      "style": "Rounded, Bold stroke (2.5px)",
+      "custom_svgs": "Use simple SVG shapes for 'Gems', 'Hearts', 'Fire' (Streak) if libraries lack the specific gamified look."
+    }
+  },
+  "gamification_elements": {
+    "streak": {
+      "color": "text-orange-500",
+      "icon": "Flame",
+      "animation": "animate-pulse"
+    },
+    "xp": {
+      "color": "text-yellow-400",
+      "icon": "Zap",
+      "animation": "animate-bounce-subtle"
+    },
+    "hearts": {
+      "color": "text-red-500",
+      "icon": "Heart",
+      "animation": "animate-beat"
+    }
+  },
+  "motion_guidelines": {
+    "hover": "scale-105 transition-transform duration-200 ease-out",
+    "tap": "scale-95 transition-transform duration-100 ease-in",
+    "page_transition": "animate-in fade-in slide-in-from-bottom-4 duration-500",
+    "success_pop": "animate-in zoom-in duration-300 spring-bounce"
+  },
+  "accessibility": {
+    "contrast": "Ensure text on colored buttons is White or Dark Slate. Avoid light text on yellow.",
+    "focus_states": "Visible ring-4 ring-sky-200 on all interactive elements.",
+    "reduced_motion": "Respect prefers-reduced-motion media query."
+  },
+  "instructions_to_main_agent": [
+    "1. INSTALL FONTS: Add the Google Fonts import to index.css immediately.",
+    "2. TAILWIND CONFIG: Update tailwind.config.js to include the new colors (sky, indigo, yellow) and font families (Nunito, Outfit).",
+    "3. COMPONENT OVERRIDES: Heavily customize Shadcn components. Remove the default 'radius-md' and 'border-input' look. Make everything rounded-2xl or 3xl.",
+    "4. GAMIFICATION FIRST: Always display the User's Streak, XP, and Hearts in the top navigation bar.",
+    "5. PATH LAYOUT: For the Dashboard, do not use a standard table or grid. Build a custom 'Path' component where lesson nodes are connected by SVG lines.",
+    "6. USE IMAGES: Use the provided Unsplash URLs for the Landing Page. Do not use placeholders.",
+    "7. DATA-TESTID: Add data-testid to all buttons, inputs, and lesson options."
+  ],
+  "universal_guidelines": [
+    "Don't make generic centered layouts.",
+    "Create depth through layered design elements.",
+    "Use 2-3x more spacing than feels comfortable.",
+    "Every interaction needs micro-animations.",
+    "Never use AI assistant Emoji characters for icons."
+  ]
+}

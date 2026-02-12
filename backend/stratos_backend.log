@@ -1,0 +1,33 @@
+2026-01-30 18:16:16,942 - stratos - INFO - Frontend build directory: C:\Users\HAIDER\OneDrive\Desktop\PROJECTS\adhista\backend\frontend\build
+2026-01-30 18:16:16,943 - stratos - INFO - Directory exists: False
+2026-02-04 14:19:29,730 - stratos - INFO - Frontend build directory: C:\Users\HAIDER\OneDrive\Desktop\PROJECTS\copy\backend\frontend\build
+2026-02-04 14:19:29,732 - stratos - INFO - Directory exists: False
+2026-02-04 14:24:55,825 - stratos - INFO - Frontend build directory: C:\Users\HAIDER\OneDrive\Desktop\PROJECTS\copy\backend\frontend\build
+2026-02-04 14:24:55,828 - stratos - INFO - Directory exists: False
+2026-02-04 14:27:39,903 - asyncio - ERROR - Exception in callback _ProactorBasePipeTransport._call_connection_lost()
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost()>
+Traceback (most recent call last):
+  File "C:\Program Files\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+2026-02-04 14:43:55,282 - stratos - INFO - Frontend build directory: C:\Users\HAIDER\OneDrive\Desktop\PROJECTS\copy\backend\frontend\build
+2026-02-04 14:43:55,286 - stratos - INFO - Directory exists: False
+2026-02-04 14:57:40,148 - stratos - INFO - Frontend build directory: C:\Users\HAIDER\OneDrive\Desktop\PROJECTS\copy\backend\frontend\build
+2026-02-04 14:57:40,151 - stratos - INFO - Directory exists: False
+2026-02-11 20:44:26,678 - stratos - INFO - Frontend build directory: C:\Users\HAIDER\OneDrive\Desktop\PROJECTS\adhista\backend\frontend\build
+2026-02-11 20:44:26,680 - stratos - INFO - Directory exists: False
+2026-02-11 20:57:48,666 - backend.stratos - INFO - Frontend build directory: C:\Users\HAIDER\OneDrive\Desktop\PROJECTS\adhista\backend\frontend\build
+2026-02-11 20:57:48,669 - backend.stratos - INFO - Directory exists: False
+2026-02-11 20:57:49,169 - webview - ERROR - pythonnet cannot be loaded
+Traceback (most recent call last):
+  File "C:\Users\HAIDER\OneDrive\Desktop\PROJECTS\adhista\.venv\Lib\site-packages\webview\__init__.py", line 115, in import_winforms
+    import webview.winforms as gui
+  File "C:\Users\HAIDER\OneDrive\Desktop\PROJECTS\adhista\.venv\Lib\site-packages\webview\winforms.py", line 18, in <module>
+    import clr
+ModuleNotFoundError: No module named 'clr'
+2026-02-12 16:00:24,311 - stratos - INFO - Frontend build directory: C:\Users\HAIDER\OneDrive\Desktop\PROJECTS\adhista\backend\frontend\build
+2026-02-12 16:00:24,313 - stratos - INFO - Directory exists: False

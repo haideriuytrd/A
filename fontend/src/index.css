@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=Outfit:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Nunito', sans-serif;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+@layer base {
+    :root {
+        --background: 210 40% 98%;
+        --foreground: 222 47% 11%;
+        --card: 0 0% 100%;
+        --card-foreground: 222 47% 11%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 222 47% 11%;
+        --primary: 199 89% 48%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 239 84% 67%;
+        --secondary-foreground: 0 0% 100%;
+        --muted: 210 40% 96%;
+        --muted-foreground: 215 16% 47%;
+        --accent: 48 96% 53%;
+        --accent-foreground: 26 83% 14%;
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 0 0% 100%;
+        --success: 142 71% 45%;
+        --success-foreground: 0 0% 100%;
+        --border: 214 32% 91%;
+        --input: 214 32% 91%;
+        --ring: 199 89% 48%;
+        --chart-1: 12 76% 61%;
+        --chart-2: 173 58% 39%;
+        --chart-3: 197 37% 24%;
+        --chart-4: 43 74% 66%;
+        --chart-5: 27 87% 67%;
+        --radius: 1rem;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+/* Custom animations */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(14, 165, 233, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 40px rgba(14, 165, 233, 0.6);
+    }
+}
+
+@keyframes bounce-subtle {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes wiggle {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-5deg);
+    }
+
+    75% {
+        transform: rotate(5deg);
+    }
+}
+
+@keyframes confetti {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100px) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-bounce-subtle {
+    animation: bounce-subtle 1s ease-in-out infinite;
+}
+
+.animate-wiggle {
+    animation: wiggle 0.5s ease-in-out;
+}
+
+/* Stratos button styles */
+.stratos-btn-primary {
+    @apply bg-sky-500 hover:bg-sky-400 text-white font-extrabold rounded-2xl border-b-4 border-sky-700 active:border-b-0 active:translate-y-1 transition-all px-8 py-4;
+}
+
+.stratos-btn-secondary {
+    @apply bg-white hover:bg-slate-50 text-slate-700 font-bold rounded-2xl border-2 border-slate-200 border-b-4 active:border-b-2 active:translate-y-[2px] transition-all px-6 py-3;
+}
+
+.stratos-btn-danger {
+    @apply bg-red-500 hover:bg-red-400 text-white font-bold rounded-2xl border-b-4 border-red-700 active:border-b-0 active:translate-y-1 transition-all px-6 py-3;
+}
+
+.stratos-btn-success {
+    @apply bg-green-500 hover:bg-green-400 text-white font-bold rounded-2xl border-b-4 border-green-700 active:border-b-0 active:translate-y-1 transition-all px-6 py-3;
+}
+
+/* Card styles */
+.stratos-card {
+    @apply bg-white rounded-3xl border-2 border-slate-100 shadow-[0_8px_30px_rgba(0,0,0,0.04)] p-6;
+}
+
+.stratos-card-interactive {
+    @apply bg-white rounded-3xl border-2 border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all cursor-pointer;
+}
+
+/* Input styles */
+.stratos-input {
+    @apply bg-slate-50 border-2 border-slate-200 focus:border-sky-400 focus:ring-4 focus:ring-sky-100 rounded-xl px-4 py-3 font-medium text-slate-700 placeholder:text-slate-400 transition-all outline-none w-full;
+}
+
+/* Lesson option styles */
+.lesson-option {
+    @apply bg-white hover:bg-sky-50 border-2 border-slate-200 hover:border-sky-300 rounded-2xl p-4 cursor-pointer transition-all;
+}
+
+.lesson-option.selected {
+    @apply bg-sky-50 border-sky-400 ring-4 ring-sky-100;
+}
+
+.lesson-option.correct {
+    @apply bg-green-50 border-green-400;
+}
+
+.lesson-option.incorrect {
+    @apply bg-red-50 border-red-400;
+}
+
+/* Progress path styles */
+.lesson-node {
+    @apply w-16 h-16 rounded-full flex items-center justify-center font-bold text-lg transition-all cursor-pointer;
+}
+
+.lesson-node.completed {
+    @apply bg-green-500 text-white border-4 border-green-600;
+}
+
+.lesson-node.current {
+    @apply bg-sky-500 text-white border-4 border-sky-600 animate-pulse-glow;
+}
+
+.lesson-node.locked {
+    @apply bg-slate-200 text-slate-400 border-4 border-slate-300 cursor-not-allowed;
+}
+
+/* Gradient backgrounds */
+.bg-stratos-hero {
+    background: linear-gradient(180deg, #38bdf8 0%, #6366f1 100%);
+}
+
+.bg-stratos-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+}
+
+/* Streak fire animation */
+.streak-fire {
+    @apply text-orange-500;
+    filter: drop-shadow(0 0 8px rgba(249, 115, 22, 0.5));
+}
+
+/* XP zap animation */
+.xp-zap {
+    @apply text-yellow-400;
+    filter: drop-shadow(0 0 8px rgba(250, 204, 21, 0.5));
+}
+
+/* Hearts */
+.hearts-display {
+    @apply text-red-500;
+    filter: drop-shadow(0 0 4px rgba(239, 68, 68, 0.4));
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-slate-100 rounded-full;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-slate-300 rounded-full hover:bg-slate-400;
+}
+
+/* Focus states */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    @apply ring-4 ring-sky-200 outline-none;
+}
+
+/* Language flag styling */
+.language-flag {
+    font-size: 2.5rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* Achievement badge */
+.achievement-badge {
+    @apply relative;
+}
+
+.achievement-badge.locked {
+    filter: grayscale(100%);
+    opacity: 0.5;
+}
+
+.achievement-badge.unlocked {
+    animation: bounce-subtle 0.5s ease-out;
+}
+
+/* Toast animations */
+.toast-success {
+    @apply bg-green-500 text-white;
+}
+
+.toast-error {
+    @apply bg-red-500 text-white;
+}
